@@ -12,14 +12,26 @@ header h1 {
 	flex-direction: column;
 	justify-content: flex-end;
 }
-#evaluation-form {
-	display: flex;
-	width: 675px;
-	flex-direction: column;
-}
 #main {
 	display: flex;
 	justify-content: space-between;
+}
+#evaluation-form {
+	display: flex;
+	flex-direction: column;
+	width: 675px;
+}
+#input-name {
+	width: 45%;
+}
+#input-lastname {
+	width: 45%;
+}
+#input-email {
+	width: 45%;
+}
+#house {
+	width: 46.3%;
 }
 #trybewarts-forms-logo {
 	height: 500px;
