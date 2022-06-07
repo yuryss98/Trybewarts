@@ -12,3 +12,15 @@ header h1 {
 	flex-direction: column;
 	justify-content: flex-end;
 }
+#evaluation-form {
+	display: flex;
+	width: 675px;
+	flex-direction: column;
+}
+#main {
+	display: flex;
+	justify-content: space-between;
+}
+#trybewarts-forms-logo {
+	height: 500px;
+}
