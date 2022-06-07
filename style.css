@@ -3,6 +3,9 @@ header{
   background-color: rgb(50, 167, 145);
 	justify-content: space-between;
 }
+header h1 {
+	align-self: center;
+}
 
 .trybewarts-login{
 	display: flex;
