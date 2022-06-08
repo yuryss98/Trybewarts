@@ -1,7 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
+
 header {
   display: flex;
   background-color: rgb(50, 167, 145);
@@ -18,7 +19,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
 }
 
 #main {
@@ -79,48 +80,59 @@ header h1 {
   color: rgb(50, 167, 145);
   font-size: 20px;
 }
-#section-name{
+
+#section-name {
   padding: 15px;
 }
-#section-select{
+
+#section-select {
   padding: 15px;
 }
-#validation{
+
+#validation {
   padding: 15px;
-  font-weight: bold;
+  font-weight: 900;
   align-items: space-between;
-  
+
 }
-span{
+
+span {
   padding: 15px;
 }
-.textarea{
+
+.textarea {
   padding: 15px;
 }
-#last-section{
+
+#last-section {
   padding: 15px;
-  font-weight: bold;
+  font-weight: 900;
 }
-#email{
+
+#email {
   padding: 5px;
   border-radius: 15px;
   border: none;
 }
-#password{
+
+#password {
   padding: 5px;
   border-radius: 15px;
   border: none;
 }
-button{
+
+button {
   padding: 5px;
   border-radius: 15px;
   border: none;
   background-color: rgb(45, 153, 133);
   cursor: pointer;
 }
-button:hover{
+
+button:hover {
   background-color: rgb(16, 92, 78);
 }
-footer{
+
+footer {
   color: rgba(50, 167, 146, 0.808);
 }
