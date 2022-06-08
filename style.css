@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 header {
   display: flex;
   background-color: rgb(50, 167, 145);
@@ -6,12 +10,15 @@ header {
 
 header h1 {
   align-self: center;
+  color: white;
+  font-size: 50px;
 }
 
 .trybewarts-login {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  
 }
 
 #main {
@@ -27,18 +34,30 @@ header h1 {
 
 #input-name {
   width: 45%;
+  border-radius: 15px;
+  height: 100%;
+  border: none;
 }
 
 #input-lastname {
   width: 45%;
+  border-radius: 15px;
+  height: 100%;
+  border: none;
 }
 
 #input-email {
   width: 45%;
+  border-radius: 15px;
+  height: 100%;
+  border: none;
 }
 
 #house {
   width: 46.3%;
+  border-radius: 15px;
+  height: 100%;
+  border: none;
 }
 
 #trybewarts-forms-logo {
@@ -48,9 +67,60 @@ header h1 {
 #section-radio {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+  color: rgb(50, 167, 145);
+  font-size: 20px;
 }
 
 #section-checkbox {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+  color: rgb(50, 167, 145);
+  font-size: 20px;
+}
+#section-name{
+  padding: 15px;
+}
+#section-select{
+  padding: 15px;
+}
+#validation{
+  padding: 15px;
+  font-weight: bold;
+  align-items: space-between;
+  
+}
+span{
+  padding: 15px;
+}
+.textarea{
+  padding: 15px;
+}
+#last-section{
+  padding: 15px;
+  font-weight: bold;
+}
+#email{
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+}
+#password{
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+}
+button{
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(45, 153, 133);
+  cursor: pointer;
+}
+button:hover{
+  background-color: rgb(16, 92, 78);
+}
+footer{
+  color: rgba(50, 167, 146, 0.808);
 }
