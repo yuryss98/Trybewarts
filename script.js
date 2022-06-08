@@ -5,12 +5,14 @@ const checkBox = document.querySelector('#agreement');
 const btnSubmit = document.querySelector('#submit-btn');
 const textarea = document.querySelector('#textarea');
 const counter = document.querySelector('#counter');
-const formMain = document.querySelector('#evaluation-form');
 const tagMain = document.querySelector('#main');
 const formNome = document.querySelector('#input-name');
-const fomrSobreNome = document.querySelector('input-lastname');
+const formSobreNome = document.querySelector('#input-lastname');
 const formEmail = document.querySelector('#input-email');
 const formCasa = document.querySelector('#house');
+const formFamily = document.querySelectorAll('.radio-input');
+const formCheckbox = document.querySelectorAll('.subject');
+const formNota = document.querySelectorAll('.input-nota');
 
 function validation(e) {
   e.preventDefault();
@@ -36,13 +38,39 @@ function counterChars(e) {
   counter.textContent = (maxChars - inputLength);
   if (inputLength >= maxChars) e.preventDefault();
 }
+function checkedRadio() {
+  for (let i = 0; i < formFamily.length; i += 1) {
+    if (formFamily[i].checked === true) {
+      return formFamily[i].value;
+    }
+  }
+}
+function checkedcheckbox() {
+  for (let i = 0; i < formCheckbox.length; i += 1) {
+    if (formCheckbox[i].checked === true) {
+      return formCheckbox[i].value;
+    }
+  }
+}
+function checkedRadioNotes() {
+  for (let i = 0; i < formNota.length; i += 1) {
+    if (formNota[i].checked === true) {
+      return formNota[i].value;
+    }
+  }
+}
+
 function newForm(e) {
+  while (tagMain.firstChild) {
+    tagMain.removeChild(tagMain.lastChild);
+  }
+  const newPage = document.createElement('form');
+  newPage.id = 'form-data';
+  newPage.textContent = `Nome: ${formNome.value} ${formSobreNome.value} Email: ${formEmail.value} 
+   Casa: ${formCasa.value} Família: ${checkedRadio()} Matérias: ${checkedcheckbox()} 
+   Avaliação: ${checkedRadioNotes()} Observações: ${textarea.value}`;
+  tagMain.appendChild(newPage);
   e.preventDefault();
-  formMain.innerHTML = '';
-  const newForms = document.createElement('form');
-  newForms.innerText = '????????????????????';
-  newForms.style.order = -1;
-  tagMain.appendChild(newForms);
 }
 btnSubmit.addEventListener('click', newForm);
 checkBox.addEventListener('click', habiltaBotao);

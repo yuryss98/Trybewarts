@@ -120,6 +120,11 @@ span {
   border-radius: 15px;
   border: none;
 }
+#form-data{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
 
 button {
   padding: 5px;
