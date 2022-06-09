@@ -13,6 +13,7 @@ const formCasa = document.querySelector('#house');
 const formFamily = document.querySelectorAll('.radio-input');
 const formCheckbox = document.querySelectorAll('.subject');
 const formNota = document.querySelectorAll('.input-nota');
+const formMain = document.getElementById('evaluation-form');
 
 function validation(e) {
   e.preventDefault();
@@ -46,11 +47,13 @@ function checkedRadio() {
   }
 }
 function checkedcheckbox() {
+  let testando = '';
   for (let i = 0; i < formCheckbox.length; i += 1) {
     if (formCheckbox[i].checked === true) {
-      return formCheckbox[i].value;
+      testando += `${formCheckbox[i].value}, `;
     }
   }
+  return testando;
 }
 function checkedRadioNotes() {
   for (let i = 0; i < formNota.length; i += 1) {
@@ -61,16 +64,19 @@ function checkedRadioNotes() {
 }
 
 function newForm(e) {
-  while (tagMain.firstChild) {
-    tagMain.removeChild(tagMain.lastChild);
-  }
+  e.preventDefault();
+  formMain.style.display = 'none';
   const newPage = document.createElement('form');
   newPage.id = 'form-data';
-  newPage.textContent = `Nome: ${formNome.value} ${formSobreNome.value} Email: ${formEmail.value} 
-   Casa: ${formCasa.value} Família: ${checkedRadio()} Matérias: ${checkedcheckbox()} 
-   Avaliação: ${checkedRadioNotes()} Observações: ${textarea.value}`;
+  newPage.innerText = `Nome: ${formNome.value} ${formSobreNome.value}
+   Email: ${formEmail.value} 
+   Casa: ${formCasa.value}
+   Família: ${checkedRadio()}
+   Matérias: ${checkedcheckbox()} 
+   Avaliação: ${checkedRadioNotes()}
+   Observações: ${textarea.value}`;
+  newPage.style.order = -1;
   tagMain.appendChild(newPage);
-  e.preventDefault();
 }
 btnSubmit.addEventListener('click', newForm);
 checkBox.addEventListener('click', habiltaBotao);
