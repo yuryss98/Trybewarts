@@ -12,6 +12,6 @@ E também poder praticar trabalho em dupla.
 
 ## Habilidades
 
-* CSS
-* HTML
-* JavaScript
+* CSS - flexbox;
+* HTML;
+* JavaScript;
